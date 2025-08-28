@@ -6,42 +6,55 @@
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  background-image: linear-gradient(90deg, rgb(189, 195, 199) 0.00%,rgb(224, 225, 225) 100.00%);
+  background: linear-gradient(135deg, var(--dl-color-gray-50) 0%, var(--dl-color-primary-50) 100%);
 }
+
 .data-sources-navbar-interactive {
   width: 100%;
   display: flex;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 50;
   align-items: center;
-  padding-top: var(--dl-space-space-twounits);
-  padding-left: var(--dl-space-space-threeunits);
-  padding-right: var(--dl-space-space-threeunits);
-  padding-bottom: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-oneandhalfunits) var(--dl-space-space-threeunits);
   justify-content: space-between;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--dl-color-gray-200);
+  box-shadow: var(--dl-shadow-sm);
 }
+
 .data-sources-desktop-menu {
   display: flex;
+  align-items: center;
+  gap: var(--dl-space-space-twounits);
 }
+
 .data-sources-nav {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  gap: var(--dl-space-space-unit);
 }
-.data-sources-navlink {
-  margin-right: var(--dl-space-space-twounits);
-  text-decoration: none;
-}
-.data-sources-link {
-  text-decoration: none;
-}
-.data-sources-navlink1 {
-  margin-left: var(--dl-space-space-twounits);
-  text-decoration: none;
-}
+
+.data-sources-navlink,
+.data-sources-link,
+.data-sources-navlink1,
 .data-sources-link01 {
-  margin-left: var(--dl-space-space-twounits);
   text-decoration: none;
+  color: var(--dl-color-gray-700);
+  font-weight: 500;
+  padding: var(--dl-space-space-halfunit) var(--dl-space-space-unit);
+  border-radius: var(--dl-radius-radius-radius8);
+  transition: all 0.2s ease;
+}
+
+.data-sources-navlink:hover,
+.data-sources-link:hover,
+.data-sources-navlink1:hover,
+.data-sources-link01:hover {
+  color: var(--dl-color-primary-600);
+  background-color: var(--dl-color-primary-50);
 }
 .data-sources-btn-group {
   display: flex;
